@@ -1147,7 +1147,7 @@ ja: &DEFAULT_JA
   comments_title             : "コメント"
   more_label                 : "さらに詳しく"
   related_label              : "関連記事"
-  follow_label               : "フォロー"
+  follow_label               : # "フォロー"
   feed_label                 :
   powered_by                 :
   website_label              :
