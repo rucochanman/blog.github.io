@@ -20,8 +20,8 @@ rtl                      : # true, false (default) # turns direction of the page
 title                    : "あのーんブログ"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "\L ⊃"
-description              : "\L ⊃のブログ"
+name                     : " \ L ⊃"
+description              : " \ L ⊃ のブログ"
 url                      : "https://rucochanman.github.io/blog.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "rucochanman/blog.github.io"
@@ -113,14 +113,14 @@ analytics:
 
 # Site Author
 author:
-  name             : "\L ⊃"
+  name             : " \ L ⊃"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "ガビガビ音楽家です"
+  bio              : "ガビガビ音楽家"
   location         : 
   email            :
   links:
     - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
+      icon: "fas fa-solid fa-at" #"fas fa-fw fa-envelope-square"
       url: "mailto:rucochanman@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
