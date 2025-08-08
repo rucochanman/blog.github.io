@@ -166,6 +166,7 @@ footer:
 include:
   - .htaccess
   - _pages
+  - assets/css/custom.css
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -325,3 +326,4 @@ defaults:
       comments: # true
       share: true
       related: true
+      css: "/assets/css/custom.css"
