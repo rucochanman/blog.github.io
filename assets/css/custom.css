@@ -6,5 +6,5 @@
 }
 
 body {
-  font-family: 'MyCustomFont', sans-serif;
+  font-family: 'MyCustomFont', sans-serif; !important;
 }
