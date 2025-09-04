@@ -1,10 +1,11 @@
 @font-face {
   font-family: 'MyCustomFont';
-  src: url('/assets/fonts/rucofont.ttf') format('truetype');
+  src: url('/assets/fonts/rucofont.woff2') format('woff2'),   /* まず woff2 を読み込む */
+       url('/assets/fonts/rucofont.ttf') format('truetype');  /* フォールバック用 */
   font-weight: normal;
   font-style: normal;
 }
 
 body {
-  font-family: 'MyCustomFont', sans-serif; !important;
+  font-family: 'MyCustomFont', sans-serif !important;
 }
