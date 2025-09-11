@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'MyCustomFont';
-  src: url('/assets/fonts/rucofont.woff2') format('woff2'),   /* まず woff2 を読み込む */
-       url('/assets/fonts/rucofont.ttf') format('truetype');  /* フォールバック用 */
+  src: url('{{ "/assets/fonts/rucofont.woff2" | relative_url }}') format('woff2'),
+       url('{{ "/assets/fonts/rucofont.ttf" | relative_url }}') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
