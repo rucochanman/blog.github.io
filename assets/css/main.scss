@@ -5,5 +5,19 @@ search: false
 
 @charset "utf-8";
 
+/* ▼▼▼ ここから追加：Minimal Mistakes のフォント変数を上書き ▼▼▼ */
+
+/* 本文フォントを自作フォントに */
+$global-font-family: 'MyCustomFont', sans-serif !default;
+
+/* 見出し・タイトルも自作フォントに */
+$header-font-family: 'MyCustomFont', sans-serif !default;
+
+/* タイトルが太字になるのを避けたい場合（任意） */
+$header-font-weight: 400 !default;
+
+/* ▲▲▲ ここまで必須 ▲▲▲ */
+
+/* ▼ その後でテーマを読み込む（これが重要） ▼ */
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
