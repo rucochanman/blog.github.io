@@ -6,6 +6,10 @@
   font-style: normal;
 }
 
+:root { --header-font: 'MyCustomFont', sans-serif !important; }
+.site-title, .page__title { font-family: 'MyCustomFont' !important; }
+
+
 html, body,
 h1, h2, h3, h4, h5, h6,
 p, a, li, span, div,
