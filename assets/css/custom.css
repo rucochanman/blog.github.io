@@ -9,6 +9,11 @@
 :root { --header-font: 'MyCustomFont', sans-serif !important; }
 .site-title, .page__title { font-family: 'MyCustomFont' !important; }
 
+#page-title,
+#page-title a,
+h1.page__title {
+  font-family: 'YourFontName', sans-serif !important;
+}
 
 html, body,
 h1, h2, h3, h4, h5, h6,
