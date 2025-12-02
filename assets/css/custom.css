@@ -6,16 +6,34 @@
   font-style: normal;
 }
 
-/* H1タイトル強制上書き */
-#page-title,
-#page-title a,
+/* 最強セレクタで Minimal Mistakes の見出し指定を完全上書き */
+
+/* 記事タイトル */
 .page__title,
 .page__title a,
-h1,
-h1 a {
+#page-title,
+#page-title a {
   font-family: 'MyCustomFont' !important;
   font-weight: normal !important;
 }
+
+/* 全見出し */
+h1, h1 a,
+h2, h2 a,
+h3, h3 a,
+h4, h4 a,
+h5, h5 a,
+h6, h6 a {
+  font-family: 'MyCustomFont' !important;
+  font-weight: normal !important;
+}
+
+/* ナビゲーションやヘッダー */
+.masthead,
+.masthead * {
+  font-family: 'MyCustomFont' !important;
+}
+
 body {
   font-family: 'MyCustomFont', sans-serif !important;
 }
