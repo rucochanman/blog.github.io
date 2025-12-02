@@ -6,22 +6,15 @@
   font-style: normal;
 }
 
-:root { --header-font: 'MyCustomFont', sans-serif !important; }
-.site-title, .page__title { font-family: 'MyCustomFont' !important; }
 
+h1,
+h1 a,
 #page-title,
 #page-title a,
-h1.page__title {
+.page__title {
   font-family: 'YourFontName', sans-serif !important;
 }
 
-html, body,
-h1, h2, h3, h4, h5, h6,
-p, a, li, span, div,
-.site-title, .site-title a,
-.page__title, .page__title *,
-.entry-title,
-.masthead__menu-item, .masthead__menu-item a,
-.sidebar, .sidebar * {
+body {
   font-family: 'MyCustomFont', sans-serif !important;
 }
