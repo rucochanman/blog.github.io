@@ -6,15 +6,16 @@
   font-style: normal;
 }
 
-
-h1,
-h1 a,
+/* H1タイトル強制上書き */
 #page-title,
 #page-title a,
-.page__title {
-  font-family: 'YourFontName', sans-serif !important;
+.page__title,
+.page__title a,
+h1,
+h1 a {
+  font-family: 'MyCustomFont' !important;
+  font-weight: normal !important;
 }
-
 body {
   font-family: 'MyCustomFont', sans-serif !important;
 }
