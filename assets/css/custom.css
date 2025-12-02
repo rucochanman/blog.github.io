@@ -6,6 +6,13 @@
   font-style: normal;
 }
 
-* {
+html, body,
+h1, h2, h3, h4, h5, h6,
+p, a, li, span, div,
+.site-title, .site-title a,
+.page__title, .page__title *,
+.entry-title,
+.masthead__menu-item, .masthead__menu-item a,
+.sidebar, .sidebar * {
   font-family: 'MyCustomFont', sans-serif !important;
 }
