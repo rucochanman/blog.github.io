@@ -20,8 +20,8 @@ rtl                      : # true, false (default) # turns direction of the page
 title                    : "あのーんブログ"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : " \ L ⊃"
-description              : " \ L ⊃ のブログ"
+name                     : "IL⊃"
+description              : "IL⊃のブログ"
 url                      : "https://rucochanman.github.io/blog.github.io"
 baseurl                  : "/blog.github.io"
 repository               : "rucochanman/blog.github.io"
@@ -320,7 +320,7 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
+      read_time: # true
       comments: # true
       share: true
       related: true
