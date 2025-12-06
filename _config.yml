@@ -22,7 +22,7 @@ title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "IL⊃"
 description              : "IL⊃のブログ"
-url                      : "https://rucochanman.github.io/blog.github.io"
+url                      : "https://rucochanman.github.io"
 baseurl                  : "/blog.github.io"
 repository               : "rucochanman/blog.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
