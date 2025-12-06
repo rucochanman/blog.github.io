@@ -1,12 +1,10 @@
 @font-face {
   font-family: 'MyCustomFont';
-  src: url('{{ "/assets/fonts/rucofont.woff2" | relative_url }}') format('woff2'),
-       url('{{ "/assets/fonts/rucofont.ttf" | relative_url }}') format('truetype');
+  src: url('/blog.github.io/assets/fonts/rucofont.woff2') format('woff2'),
+       url('/blog.github.io/assets/fonts/rucofont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
-
-/* 最強セレクタで Minimal Mistakes の見出し指定を完全上書き */
 
 /* 記事タイトル */
 .page__title,
@@ -28,12 +26,13 @@ h6, h6 a {
   font-weight: normal !important;
 }
 
-/* ナビゲーションやヘッダー */
+/* ナビゲーションや Masthead */
 .masthead,
 .masthead * {
   font-family: 'MyCustomFont' !important;
 }
 
+/* 本文 */
 body {
   font-family: 'MyCustomFont', sans-serif !important;
 }
