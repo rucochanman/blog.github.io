@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'MyCustomFont';
-  src: url('/blog.github.io/assets/fonts/rucofont.woff2') format('woff2'),
-       url('/blog.github.io/assets/fonts/rucofont.ttf') format('truetype');
+  src: url('/blog.github.io/assets/fonts/rucosyo.woff2') format('woff2'),
+       url('/blog.github.io/assets/fonts/rucosyo.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
