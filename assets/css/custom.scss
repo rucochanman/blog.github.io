@@ -77,15 +77,6 @@ h6, h6 a {
   font-family: 'MyCustomFont', sans-serif !important;
 }
 
-/* ▼ 文字サイズ・行間の上書き */
-$type-size-base: 1.8rem !default;
-$line-height-base: 1.9 !default;
-
-/* 本文 */
-body {
-  font-family: 'MyCustomFont', sans-serif !important;
-}
-
 /* Font Awesome アイコンは元のフォントを使う */
 .fa,
 .fas,
@@ -95,5 +86,35 @@ body {
 .svg-inline--fa {
   font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands" !important;
   font-weight: 900;
+}
+
+/* =========================
+   文字サイズ・行間（最終指定）
+   ========================= */
+
+/* PC / タブレット（デフォルト） */
+body {
+  font-family: 'MyCustomFont', sans-serif !important;
+  font-size: 18.5px;   /* 通常16px想定 → 自作フォント用に拡大 */
+  line-height: 1.85;   /* 字面が詰まりやすい前提 */
+}
+
+/* スマホ */
+@media (max-width: 768px) {
+  body {
+    font-size: 17px;   /* スマホとしてはやや大きめ */
+    line-height: 1.75;
+  }
+}
+
+/* 見出し（自作フォント用にわずかに強調） */
+h1 { font-size: 2.2em; }
+h2 { font-size: 1.8em; }
+h3 { font-size: 1.45em; }
+
+@media (max-width: 768px) {
+  h1 { font-size: 1.9em; }
+  h2 { font-size: 1.6em; }
+  h3 { font-size: 1.35em; }
 }
 
