@@ -3,8 +3,8 @@
 
 @font-face {
   font-family: 'MyCustomFont';
-  src: url('{{ "/assets/fonts/rucosyo_v4.woff2" | relative_url }}') format('woff2'),
-       url('{{ "/assets/fonts/rucosyo_v3.ttf"   | relative_url }}') format('truetype');
+  src: url('{{ "/assets/fonts/rucosyo_v5.woff2" | relative_url }}') format('woff2'),
+       url('{{ "/assets/fonts/rucosyo_v5.ttf"   | relative_url }}') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
