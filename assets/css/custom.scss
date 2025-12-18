@@ -35,6 +35,39 @@ h6, h6 a {
   font-family: 'MyCustomFont' !important;
 }
 
+/* ===== UI / メタ情報 全般 ===== */
+
+/* プロフィール（左サイドバー） */
+.author__content,
+.author__name,
+.author__bio,
+.author__urls,
+.author__urls-wrapper,
+.author__urls a {
+  font-family: 'MyCustomFont', sans-serif !important;
+}
+
+/* メタ情報（タグ、日付、読了時間など） */
+.page__meta,
+.page__meta *,
+.archive__item-meta,
+.archive__item-meta * {
+  font-family: 'MyCustomFont', sans-serif !important;
+}
+
+/* ページネーション（前へ / 次へ） */
+.pagination,
+.pagination *,
+.pagination--pager {
+  font-family: 'MyCustomFont', sans-serif !important;
+}
+
+/* 共有メニュー */
+.page__share,
+.page__share * {
+  font-family: 'MyCustomFont', sans-serif !important;
+}
+
 /* 本文調整 */
 $type-size-1: 1.25em;
 $paragraph-line-height: 1.9;
