@@ -118,3 +118,20 @@ h3 { font-size: 1.45em; }
   h3 { font-size: 1.35em; }
 }
 
+/* =========================
+   本文中リンクの改行対策
+   ========================= */
+
+.page__content a {
+  word-break: break-word;        /* 英単語を途中で折る */
+  overflow-wrap: anywhere;       /* モダンブラウザ用（最重要） */
+  white-space: normal;           /* nowrap を強制解除 */
+}
+
+/* URLそのものが表示される場合の保険 */
+.page__content p,
+.page__content li {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
