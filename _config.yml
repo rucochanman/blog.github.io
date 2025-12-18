@@ -324,7 +324,6 @@ defaults:
       comments: # true
       share:　
         - twitter
-        - facebook
         - bluesky
       related: true
       css: "/assets/css/custom.css"
