@@ -89,7 +89,7 @@ yandex_site_verification :
 baidu_site_verification  :
 
 # Social Sharing
-twitter:
+Twitter:
   username               : "rucochanman"
 facebook:
   username               :
@@ -125,7 +125,7 @@ author:
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://rucochanman.github.io"
-    - label: "Twitter"
+    - label: "X"
       icon: "fab fa-brands fa-x-twitter"
       url: "https://twitter.com/rucochanman"
     - label: "Facebook"
@@ -322,6 +322,9 @@ defaults:
       author_profile: true
       read_time: # true
       comments: # true
-      share: true
+      share:　
+        - twitter
+        - facebook
+        - bluesky
       related: true
       css: "/assets/css/custom.css"
