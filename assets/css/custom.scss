@@ -35,6 +35,15 @@ h6, h6 a {
   font-family: 'MyCustomFont' !important;
 }
 
+/* Author Profile（bio）にも自作フォントを適用 */
+.author__bio,
+.author__bio *,
+.author__content,
+.author__content *,
+.author__name {
+  font-family: 'MyCustomFont', sans-serif !important;
+}
+
 /* ===== UI / メタ情報 全般 ===== */
 
 /* プロフィール（左サイドバー） */
