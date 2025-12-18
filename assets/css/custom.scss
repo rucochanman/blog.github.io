@@ -76,3 +76,15 @@ $paragraph-line-height: 1.9;
 body {
   font-family: 'MyCustomFont', sans-serif !important;
 }
+
+/* Font Awesome アイコンは元のフォントを使う */
+.fa,
+.fas,
+.far,
+.fab,
+.fal,
+.svg-inline--fa {
+  font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands" !important;
+  font-weight: 900;
+}
+
