@@ -95,14 +95,14 @@ h6, h6 a {
 /* PC / タブレット（デフォルト） */
 body {
   font-family: 'MyCustomFont', sans-serif !important;
-  font-size: 18.5px;   /* 通常16px想定 → 自作フォント用に拡大 */
+  font-size: 19px;   /* 通常16px想定 → 自作フォント用に拡大 */
   line-height: 1.85;   /* 字面が詰まりやすい前提 */
 }
 
 /* スマホ */
 @media (max-width: 768px) {
   body {
-    font-size: 18.5px;   /* スマホとしてはやや大きめ */
+    font-size: 19px;   /* スマホとしてはやや大きめ */
     line-height: 1.75;
   }
 }
