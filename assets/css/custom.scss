@@ -4,7 +4,7 @@
 @font-face {
   font-family: 'MyCustomFont';
   src: url('{{ "/assets/fonts/rucosyo_v3.woff2" | relative_url }}') format('woff2'),
-       url('{{ "/assets/fonts/rucosyo_v2.ttf"   | relative_url }}') format('truetype');
+       url('{{ "/assets/fonts/rucosyo_v3.ttf"   | relative_url }}') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
