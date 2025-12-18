@@ -35,6 +35,10 @@ h6, h6 a {
   font-family: 'MyCustomFont' !important;
 }
 
+/* 本文調整 */
+$type-size-1: 1.25em;
+$paragraph-line-height: 1.9;
+
 /* 本文 */
 body {
   font-family: 'MyCustomFont', sans-serif !important;
