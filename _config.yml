@@ -322,8 +322,6 @@ defaults:
       author_profile: true
       read_time: # true
       comments: # true
-      share:　
-        - twitter
-        - bluesky
+      share:　false
       related: true
       css: "/assets/css/custom.css"
