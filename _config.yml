@@ -21,8 +21,8 @@ rtl                      : # true, false (default) # turns direction of the page
 title                    : "あのーんブログ"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "IL⊃"
-description              : "IL⊃のブログ"
+name                     : "である子"
+description              : "である子のブログ"
 url                      : "https://rucochanman.github.io"
 baseurl                  : "/blog.github.io"
 repository               : "rucochanman/blog.github.io"
@@ -114,7 +114,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "IL⊃"
+  name             : "である子"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "ガビガビ音楽家"
   location         : 
