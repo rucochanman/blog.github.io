@@ -1,108 +1,32 @@
 ---
 ---
 
+/*
+  自作フォントの登録。
+  フォント名の指定（どこに自作フォントを使うか）は main.scss の変数で行っている。
+  ここに `.xxx * { font-family: ... !important }` を足すと
+  アイコン（Font Awesome）まで自作フォントになって表示が崩れるので足さないこと。
+*/
 @font-face {
   font-family: 'MyCustomFont';
-  src: url('{{ "/assets/fonts/rucosyo_v6.woff2" | relative_url }}') format('woff2'),
-       url('{{ "/assets/fonts/rucosyo_v6.ttf"   | relative_url }}') format('truetype');
+  src: url('{{ "/assets/fonts/rucosyo_v6.woff2" | relative_url }}') format('woff2');
   font-weight: normal;
   font-style: normal;
-}
-
-/* 記事タイトル */
-.page__title,
-.page__title a,
-#page-title,
-#page-title a {
-  font-family: 'MyCustomFont' !important;
-  font-weight: normal !important;
-}
-
-/* 全見出し */
-h1, h1 a,
-h2, h2 a,
-h3, h3 a,
-h4, h4 a,
-h5, h5 a,
-h6, h6 a {
-  font-family: 'MyCustomFont' !important;
-  font-weight: normal !important;
-}
-
-/* ナビゲーションや Masthead */
-.masthead,
-.masthead * {
-  font-family: 'MyCustomFont' !important;
-}
-
-/* Author Profile（bio）にも自作フォントを適用 */
-.author__bio,
-.author__bio *,
-.author__content,
-.author__content *,
-.author__name {
-  font-family: 'MyCustomFont', sans-serif !important;
-}
-
-/* ===== UI / メタ情報 全般 ===== */
-
-/* プロフィール（左サイドバー） */
-.author__content,
-.author__name,
-.author__bio,
-.author__urls,
-.author__urls-wrapper,
-.author__urls a {
-  font-family: 'MyCustomFont', sans-serif !important;
-}
-
-/* メタ情報（タグ、日付、読了時間など） */
-.page__meta,
-.page__meta *,
-.archive__item-meta,
-.archive__item-meta * {
-  font-family: 'MyCustomFont', sans-serif !important;
-}
-
-/* ページネーション（前へ / 次へ） */
-.pagination,
-.pagination *,
-.pagination--pager {
-  font-family: 'MyCustomFont', sans-serif !important;
-}
-
-/* 共有メニュー */
-.page__share,
-.page__share * {
-  font-family: 'MyCustomFont', sans-serif !important;
-}
-
-/* Font Awesome アイコンは元のフォントを使う */
-.fa,
-.fas,
-.far,
-.fab,
-.fal,
-.svg-inline--fa {
-  font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands" !important;
-  font-weight: 900;
+  /* 読み込み中は代替フォントで先に表示し、届いたら差し替える（本文が見えない時間をなくす） */
+  font-display: swap;
 }
 
 /* =========================
-   文字サイズ・行間（最終指定）
+   文字サイズ・行間
    ========================= */
 
-/* PC / タブレット（デフォルト） */
 body {
-  font-family: 'MyCustomFont', sans-serif !important;
-  font-size: 20px;   /* 通常16px想定 → 自作フォント用に拡大 */
+  font-size: 20px;     /* 通常16px想定 → 自作フォント用に拡大 */
   line-height: 1.85;   /* 字面が詰まりやすい前提 */
 }
 
-/* スマホ */
 @media (max-width: 768px) {
   body {
-    font-size: 20px;   /* スマホとしてはやや大きめ */
     line-height: 1.75;
   }
 }
@@ -119,29 +43,16 @@ h3 { font-size: 1.45em; }
 }
 
 /* =========================
-   本文中リンクの改行対策
+   本文中リンク・URLの改行対策
    ========================= */
 
-.page__content a {
-  word-break: break-word;        /* 英単語を途中で折る */
-  overflow-wrap: anywhere;       /* モダンブラウザ用（最重要） */
-  white-space: normal;           /* nowrap を強制解除 */
-}
-
-/* URLそのものが表示される場合の保険 */
+.page__content a,
 .page__content p,
 .page__content li {
   overflow-wrap: anywhere;
   word-break: break-word;
 }
 
-/* =========================
-   スマホ版 FOLLOW ボタン
-   ========================= */
-
-.author__urls-wrapper button,
-.author__urls-wrapper .author__urls-toggle {
-  font-family: 'MyCustomFont', sans-serif !important;
-  font-weight: normal;
+.page__content a {
+  white-space: normal;
 }
-

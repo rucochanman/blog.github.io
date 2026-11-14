@@ -11,11 +11,12 @@
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
 # theme                  : "minimal-mistakes-jekyll"
-remote_theme           : "mmistakes/minimal-mistakes"
+remote_theme           : "mmistakes/minimal-mistakes@4.27.2" # 手元の _layouts/_includes/_sass と同じ版に固定（上げるときは手元のコピーも揃える）
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "en-US"
+locale                   : "en-US" # テーマの UI 文言（Recent Posts など）の言語。ja-JP にすると UI が日本語になる（要フォント登録）
+lang                     : "ja" # <html lang> の値。本文が日本語であることをブラウザに伝え、代替フォントを日本語字形にする
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
 title                    : "あのーんブログ"
 title_separator          : "-"
@@ -89,7 +90,7 @@ yandex_site_verification :
 baidu_site_verification  :
 
 # Social Sharing
-Twitter:
+twitter:
   username               : "rucochanman"
 facebook:
   username               :
@@ -246,6 +247,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-remote-theme # ローカルビルド用（GitHub Pages 上では自動で有効）
 
 # mimic GitHub Pages with --safe
 whitelist:

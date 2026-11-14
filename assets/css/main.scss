@@ -5,19 +5,22 @@ search: false
 
 @charset "utf-8";
 
-/* ▼▼▼ ここから追加：Minimal Mistakes のフォント変数を上書き ▼▼▼ */
+/* ▼ Minimal Mistakes のフォント変数を上書き（テーマ読み込みより前に書くこと） ▼ */
 
-/* 本文フォントを自作フォントに */
-$global-font-family: 'MyCustomFont', sans-serif !default;
+/* 自作フォントに無い文字の代わりに使う日本語フォント */
+$ruco-fallback: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", Meiryo, sans-serif;
 
-/* 見出し・タイトルも自作フォントに */
-$header-font-family: 'MyCustomFont', sans-serif !default;
+/* テーマ内のほぼ全要素（本文・見出し・メタ情報・ナビ・サイドバー・ボタン）がこの変数を使う */
+$sans-serif: 'MyCustomFont', $ruco-fallback;
+$global-font-family: $sans-serif;
+$header-font-family: $sans-serif;
+/* 画像キャプション・アーカイブの一部は serif 変数を使うので、こちらも揃える */
+$caption-font-family: $sans-serif;
 
-/* タイトルが太字になるのを避けたい場合（任意） */
-$header-font-weight: 400 !default;
+/* 見出しを太字にしない */
+$header-font-weight: 400;
 
-/* ▲▲▲ ここまで必須 ▲▲▲ */
+/* ▲ ここまで ▲ */
 
-/* ▼ その後でテーマを読み込む（これが重要） ▼ */
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials

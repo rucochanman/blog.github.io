@@ -1,0 +1,143 @@
+/* seq.css — seq.js のマス目表示。色は文字色（currentColor）から作るので背景が変わっても馴染む */
+
+.seq {
+  margin: 1.5em 0;
+}
+
+/* JS が動かないときは、記号入りのままふつうの文章として表示される */
+
+.seq__tracks {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+}
+
+/* 1 トラック：画面幅で折り返す */
+.seq__track {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 0.3em;
+}
+
+/* 複数トラック：縦の列（＝同じ時刻）を揃えるため折り返さず横スクロール */
+.seq--multi .seq__tracks {
+  overflow-x: auto;
+  padding-bottom: 0.3em;
+}
+.seq--multi .seq__track {
+  flex-wrap: nowrap;
+}
+
+/* 1 マス。幅はすべて同じ（幅 = 時間の長さ） */
+.seq__step {
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  width: calc(var(--seq-cell, 1) * 1em + 0.5em);
+  height: 1.9em;
+  line-height: 1.9em;
+  text-align: center;
+  white-space: nowrap;
+  border-left: 1px solid color-mix(in srgb, currentColor 10%, transparent);
+  opacity: 0.3;                     /* 再生前：楽譜は最初からそこにある */
+  transition: opacity 0.3s, background-color 0.3s;
+}
+
+/* 拍の頭（data-beats ごと）は区切り線を濃く */
+.seq__step.is-beat {
+  border-left-color: color-mix(in srgb, currentColor 40%, transparent);
+}
+
+/* 休符：小さな横棒で「ここにも時間がある」ことを見せる */
+.seq__step.is-rest {
+  position: relative;
+}
+.seq__step.is-rest::before {
+  content: "";
+  position: absolute;
+  left: 35%;
+  right: 35%;
+  top: 50%;
+  border-top: 2px solid currentColor;
+  opacity: 0.35;
+}
+
+/* 今鳴っているマス */
+.seq__step.is-now {
+  opacity: 1;
+  background-color: color-mix(in srgb, currentColor 12%, transparent);
+  transition: none;
+}
+
+/* trail：過ぎたマスは濃く残る（gate では残らない） */
+.seq--trail .seq__step.is-past {
+  opacity: 0.85;
+}
+
+/* 操作部 */
+.seq__controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4em 1.2em;
+  margin-top: 0.6em;
+  font-size: 0.8em;
+}
+
+.seq__play {
+  min-width: 2.4em;
+  height: 2.4em;
+  padding: 0 0.6em;
+  border: 1px solid currentColor;
+  border-radius: 0.3em;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.seq__tempo,
+.seq__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* テーマのフォーム装飾（幅100%・枠・影・下余白）を打ち消す */
+.seq__controls input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+  background: none;
+}
+
+.seq__tempo input {
+  width: 8em;
+}
+
+.seq__tempo output {
+  min-width: 2em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 画面には出さず読み上げにだけ渡す本文 */
+.seq__sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .seq__step {
+    transition: none;
+  }
+}
